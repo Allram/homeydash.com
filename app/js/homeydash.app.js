@@ -239,7 +239,7 @@ window.addEventListener('load', function() {
   urltoken = token;
 
   if ( token == undefined || token == "undefined" || token == "") {
-    $container.innerHTML ="<br /><br /><br /><br /><center>Faber Homey<br /><br />Please log-in at<br /><br /><a href='https://homey.ink'>homey.ink</a></center><br /><br /><center><a href='https://community.athom.com/t/homeydash-com-a-homey-dashboard/13509'>More information</a></center>"
+    $container.innerHTML ="<br /><br /><br /><br /><center>Fladby Homey<br /><br />Please log-in at<br /><br /><a href='https://homey.ink'>homey.ink</a></center><br /><br /><center><a href='https://community.athom.com/t/homeydash-com-a-homey-dashboard/13509'>More information</a></center>"
     return
   }
   /*
@@ -248,7 +248,7 @@ window.addEventListener('load', function() {
   */
   try { token = atob(token) }
   catch(err) {
-    $container.innerHTML ="<br /><br /><br /><br /><center>Faber Homey<br /><br />Token invalid. Please log-in again.<br /><br /><a href='https://homey.ink'>homey.ink</a></center><br /><br /><center><a href='https://community.athom.com/t/homeydash-com-a-homey-dashboard/13509'>More information</a></center>"
+    $container.innerHTML ="<br /><br /><br /><br /><center>Fladby Homey<br /><br />Token invalid. Please log-in again.<br /><br /><a href='https://homey.ink'>homey.ink</a></center><br /><br /><center><a href='https://community.athom.com/t/homeydash-com-a-homey-dashboard/13509'>More information</a></center>"
     return
   }
   token = JSON.parse(token);
@@ -256,7 +256,7 @@ window.addEventListener('load', function() {
 
   api.isLoggedIn().then(function(loggedIn) {
     if(!loggedIn)
-      $container.innerHTML ="<br /><br /><br /><br /><center>Faber Homey<br /><br />Token Expired. Please log-in again.<br /><br /><a href='https://homey.ink'>homey.ink</a></center>"
+      $container.innerHTML ="<br /><br /><br /><br /><center>Fladby Homey<br /><br />Token Expired. Please log-in again.<br /><br /><a href='https://homey.ink'>homey.ink</a></center>"
       return
       //throw new Error('Token Expired. Please log-in again.');
   }).then(function(){
